@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Игорь Блинов](https://up.htmlacademy.ru/adaptive/16/user/563145).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Зубов].
 
 ---
 
