@@ -9,8 +9,17 @@
   background-size: 100% auto;
   font-size: 24px;
   font-weight: 300;
-  height: 237px;
+  min-height: 237px;
   color: @color-font-white;
   padding: 101px 48px 0 48px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 50px;
+    padding: 83px 93px 79px 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 73px 229px 100px 229px;
+  }
 }
