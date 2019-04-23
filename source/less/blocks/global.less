@@ -1,11 +1,25 @@
+@font-face {
+  font-family: "Open Sans"; /* Имя шрифта */
+  src: url("../../fonts/opensans.woff"); /* Путь к файлу со шрифтом */
+}
+
 * {
   box-sizing: inherit;
 }
 
 body {
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   width: 320px;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 a {

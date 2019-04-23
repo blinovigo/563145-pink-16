@@ -11,6 +11,10 @@
   color: @color-font-white;
   padding: 101px 76px 0 76px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 50px;
+  }
 }
 
 .page-foto__appeal {
@@ -19,15 +23,27 @@
   line-height: 30px;
   margin: 54px 0 0 0;
   padding: 0 39px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .page-foto__list-foto {
   list-style: none;
   padding: 0;
-  margin: 56px 0 0 0;
+  margin: 50px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px;
+  }
 }
 
-.page-foto__item-foto {
+.page-foto__panorama {
+  margin: 92px 0 0 0;
   position: relative;
 }
 
@@ -43,14 +59,35 @@
   background-color: @color-font-red;
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    top: 54px;
+    right: 130px;
+    line-height: 36px;
+  }
 }
 
 .page-foto__comments {
   background-color: #f2f2f2;
   text-align: left;
-  width: 280px;
   margin: 0 auto 20px auto;
   padding: 25px 17px;
+
+  @media (min-width: @tablet-width) {
+    &--panorama {
+      margin: 0 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--panorama {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 130px;
+      padding: 27px;
+    }
+  }
 }
 
 .page-foto__comments-text {
@@ -61,6 +98,7 @@
     font-weight: bold;
     color: #283645;
     margin: 0;
+    flex-grow: 1;
   }
 
   &--time {
@@ -75,13 +113,14 @@
     font-weight: normal;
     color: #283645;
     margin: 0;
+    order: 1;
+    width: 100%;
   }
 
   &--number-likes {
     font-size: 12px;
     font-weight: normal;
     color: #d22856;
-    margin: 20px 0 0 19px;
     padding: 0;
   }
 }

@@ -9,14 +9,14 @@
     <header class="main-header">
       <ul class="main-header__menu">
         <li class="main-header__item-header">
-          <img src="http://placehold.it/75x22" class="main-header__logo" width="75" height="22">
+          <img class="main-header__logo main-header__logo--mobile" src="http://placehold.it/75x22" width="75" height="22">
           <button class="main-header__button"></button>
         </li>
         <li class="main-header__item">
           <a href="index.html">Главная</a>
         </li>
         <li class="main-header__item">
-          <a href="foto.html">Фотографии</a>
+          <a href="photo.html">Фотографии</a>
         </li>
         <li class="main-header__item">
           <a href="contest.html">Конкурс</a>
@@ -26,57 +26,75 @@
         </li>
       </ul>
       <div class="main-header__block">
-        <img src="http://placehold.it/75x22" class="main-header__logo" width="75" height="22">
+        <img class="main-header__logo main-header__logo--mobile" src="http://placehold.it/75x22" width="75" height="22">
         <button class="main-header__button"></button>
       </div>
     </header>
     <main class="page-index">
       <h1 class="visually-hidden">Сайт приложения 'Pink'</h1>
       <section class="download">
-        <h2 class="visually-hidden">Раздел для загрузки приложения</h2>
-        <img class="download__header-img" src="http://placehold.it/320x286" width="320" height="286">
-        <div class="download__block">
-          <a class="download__link">Скачать приложение</a>
-            <ul class="download__list-img">
-              <li class="download__list-item">
-                <img class="download__item-img" src="http://placehold.it/47x56">
-              </li>
-              <li class="download__list-item">
-                <img class="download__item-img" src="http://placehold.it/43x47">
-              </li>
-              <li class="download__list-item">
-                <img class="download__item-img" src="http://placehold.it/44x41">
-              </li>
-            </ul>
-            <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="download__wrapper-for-fon">
+          <h2 class="visually-hidden">Раздел для загрузки приложения</h2>
+          <div class="download__block">
+            <p class="download__title">Взгляните на жизнь иначе!</p>
+            <a class="download__link">Скачать приложение</a>
+              <ul class="download__list-img">
+                <li class="download__list-item">
+                  <img class="download__item-img" src="http://placehold.it/47x56">
+                </li>
+                <li class="download__list-item">
+                  <img class="download__item-img" src="http://placehold.it/43x47">
+                </li>
+                <li class="download__list-item">
+                  <img class="download__item-img" src="http://placehold.it/44x41">
+                </li>
+              </ul>
+              <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
         </div>
       </section>
       <section class="offerta">
         <h2 class="visually-hidden">Что мы предлагаем</h2>
         <p class="offerta__main-title">Устали от серости мегаполиса?
-          </br></br>
+          </br>
           Нам есть, что вам предложить!</p>
         <div class="offerta__block">
-          <p class="offerta__reasons">
-            <span class="offerta__reasons-title">Поднимает настроение</span>
-            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-          </p>
-          <p class="offerta__reasons">
-            <span class="offerta__reasons-title">Меняет мир вокруг</span>
-            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          </p>
-          <p class="offerta__reasons">
-            <span class="offerta__reasons-title">Заводит новых друзей</span>
-            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-          </p>
-          <img class="offerta__img" src="http://placehold.it/157x320" width="157" height="320">
+          <div class="offerta__reasons-wrapper">
+            <p class="offerta__reasons">
+              <span class="offerta__reasons-title">Поднимает настроение</span>
+              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            </p>
+            <p class="offerta__reasons">
+              <span class="offerta__reasons-title">Меняет мир вокруг</span>
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+            <p class="offerta__reasons">
+              <span class="offerta__reasons-title">Заводит новых друзей</span>
+              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+            </p>
+          </div>
+          <div class="offerta__img-list">
+            <img class="offerta__img offerta__img--desktop" src="http://placehold.it/157x320" width="157" height="320">
+            <img class="offerta__img offerta__img--desktop" src="http://placehold.it/157x320" width="157" height="320">
+            <img class="offerta__img offerta__img " src="http://placehold.it/157x320" width="157" height="320">
+          </div>
         </div>
       </section>
       <section class="reviews slider">
         <h2 class="visually-hidden">Отзывы пользователей</h2>
         <ul class="reviews__list slider">
           <li class="reviews__item slider__item">
-            <p class="reviews__autor">Николай Петров</p>
+            <div class="reviews__header">
+              <img class="reviews__header-img" src="http://placehold.it/238x276" width="238" height="276">
+              <div class="reviews__header-annotation">
+                <p class="reviews__header-title">Эффект на 24 часа!</p>
+                <p class="reviews__header-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+                <a href="" class="reviews__header-link">Узнать больше об исследовании</a>
+              </div>
+            </div>
+            <p class="reviews__autor">Николай Петров
+              <span>25 лет, водитель трамвая</span>
+            </p>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
               серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </li>
@@ -127,5 +145,14 @@
           </div>
       </section>
     </main>
+    <footer class="main-footer  main-footer--index">
+      <a><img class="main-footer__logo" src="http://placehold.it/147x40" width="147" height="40"></a>
+      <div class="main-footer__link-list">
+        <a class="main-footer__social-link main-footer__social-link--twetter"></a>
+        <a class="main-footer__social-link main-footer__social-link--facebook"></a>
+        <a class="main-footer__social-link main-footer__social-link--youtube"></a>
+      </div>
+      <a class="main-footer__created">Разработано <img class="main-footer__created-logo" src="http://placehold.it/27x34" width="27" height="34"></a>
+    </footer>
   </body>
 </html>

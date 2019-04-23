@@ -1,5 +1,24 @@
 .main-footer {
+  display: flex;
   text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+
+  &--index {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px;
+    min-height: 197px;
+  }
 }
 
 .main-footer__logo {
