@@ -22,7 +22,7 @@
   font-weight: normal;
   line-height: 30px;
   margin: 54px 0 0 0;
-  padding: 0 39px;
+  padding: 0 30px;
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
@@ -35,15 +35,16 @@
   margin: 50px 0 0 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
   @media (min-width: @desktop-width) {
     padding: 0 130px;
+    justify-content: space-between;
   }
 }
 
 .page-foto__panorama {
-  margin: 92px 0 0 0;
+  margin: 56px 0 0 0;
   position: relative;
 }
 
@@ -54,7 +55,7 @@
   width: 140px;
   font-size: 12px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 36px;
   color: white;
   background-color: @color-font-red;
   margin: 0;
@@ -72,6 +73,11 @@
   text-align: left;
   margin: 0 auto 20px auto;
   padding: 25px 17px;
+  width: 280px;
+
+  &--panorama {
+    margin: 0 20px;
+  }
 
   @media (min-width: @tablet-width) {
     &--panorama {
@@ -128,6 +134,10 @@
 .page-foto__comments-like {
   width: 13px;
   height: 12px;
+  background: url("../../../img/icon-heart.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
 }
 
 .page-foto__post-title {
