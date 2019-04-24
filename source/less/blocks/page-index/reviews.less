@@ -1,5 +1,6 @@
 .reviews {
   text-align: center;
+  background: #ffffff;
 }
 
 .reviews__list {
@@ -63,15 +64,19 @@
   padding: 0 20px;
   color: @color-font-black;
 
-  @media (min-width: @tablet-width) {
-    order: 1;
-  }
-
   span {
-    display: block;
+    display: none;
     font-size: 14px;
     font-weight: bold;
     color: @color-font-dark;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+
+    span {
+      display: block;
+    }
   }
 }
 
