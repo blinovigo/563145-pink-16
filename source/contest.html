@@ -8,40 +8,47 @@
   <body>
     <header class="main-header">
       <ul class="main-header__menu">
-        <li class="main-header__item-header">
-          <picture class="main-header__logo">
-            <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
-            <source media="(min-width:660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img src="img/logo-pink-white-mobile.svg">
-          </picture>
-          <button class="main-header__button"></button>
-        </li>
-        <li class="main-header__item">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="main-header__item">
-          <a href="photo.html">Фотографии</a>
-        </li>
-        <li class="main-header__item">
-          <a href="contest.html">Конкурс</a>
-        </li>
-        <li class="main-header__item">
-          <a>HTML Academy</a>
-        </li>
+        <div class="wrapper">
+          <div class="main-header__list">
+            <li class="main-header__item-header">
+              <picture class="main-header__logo">
+                <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width:660px)" srcset="img/logo-pink-white-tablet.svg">
+                <img src="img/logo-pink-white-mobile.svg">
+              </picture>
+              <button class="main-header__button"></button>
+            </li>
+            <li class="main-header__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-header__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-header__item">
+              <a href="contest.html">Конкурс</a>
+            </li>
+            <li class="main-header__item">
+              <a>HTML Academy</a>
+            </li>
+          </div>
+        </div>
       </ul>
       <div class="main-header__block">
-          <picture class="main-header__logo">
-            <source media="(min-width:660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img src="img/logo-pink-white-mobile.svg">
-          </picture>
-        <button class="main-header__button"></button>
+        <div class="wrapper">
+          <div class="main-header__item-header">
+            <picture class="main-header__logo">
+              <source media="(min-width:660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg">
+            </picture>
+          <button class="main-header__button"></button>
+        </div>
       </div>
     </header>
     <main class="page-contest">
       <h1 class="visually-hidden">Страница конкурса</h1>
       <h2 class="page-contest__main-title">Конкурс на самое безбашенное путешествие с Пинк</h2>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer wrapper">
       <a class="main-footer__logo">
         <picture>
           <source media="(min-width:1200px)" srcset="img/logo-pink-blue-desktop.svg">
@@ -60,7 +67,7 @@
         </a>
       </div>
       <a class="main-footer__created">Разработано
-      <img class="main-footer__created-logo" src="img/logo-htmlacademy.svg" width="27" height="34"></a>
+        <img class="main-footer__created-logo" src="img/logo-htmlacademy.svg" width="27" height="34"></a>
     </footer>
   </body>
 </html>
