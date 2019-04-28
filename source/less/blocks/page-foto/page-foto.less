@@ -7,13 +7,21 @@
   background-size: 100% auto;
   font-size: 24px;
   font-weight: 300;
-  height: 237px;
+  line-height: 30px;
+  letter-spacing: -0.8px;
   color: @color-font-white;
-  padding: 101px 76px 0 76px;
+  padding: 95px 70px 84px 70px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 50px;
+    padding: 177px 70px 140px 70px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 170px 300px 102px 300px;
+    line-height: 60px;
   }
 }
 
@@ -21,31 +29,54 @@
   font-size: 14px;
   font-weight: normal;
   line-height: 30px;
-  margin: 54px 0 0 0;
-  padding: 0 30px;
+  color: @color-font-dark;
+  padding: 44px 30px 0 30px;
+  margin: 0;
 
-  @media (min-width: @desktop-width) {
-    font-size: 18px;
+  span {
+    display: block;
   }
-}
 
-.page-foto__list-foto {
-  list-style: none;
-  padding: 0;
-  margin: 50px 0 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding: 92px 45px 7px 45px;
+
+    span {
+      display: inline-block;
+    }
+  }
 
   @media (min-width: @desktop-width) {
-    padding: 0 130px;
-    justify-content: space-between;
+    padding: 92px 300px 0 300px;
+    line-height: 30px;
+
+    span {
+      display: block;
+    }
   }
 }
 
 .page-foto__panorama {
-  margin: 56px 0 0 0;
+  margin: 50px 0 0 0;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin: 68px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 87px 0 0 0;
+  }
+}
+
+.page-foto__panorama-foto {
+  width: @mobile-width;
+  height: 137px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    height: 509px;
+  }
 }
 
 .page-foto__panorama-label {
@@ -56,10 +87,16 @@
   font-size: 12px;
   font-weight: bold;
   line-height: 36px;
+  letter-spacing: 0.4px;
   color: white;
   background-color: @color-font-red;
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    top: 56px;
+    right: 20px;
+  }
 
   @media (min-width: @desktop-width) {
     top: 54px;
@@ -68,58 +105,172 @@
   }
 }
 
-.page-foto__comments {
-  background-color: #f2f2f2;
-  text-align: left;
-  margin: 0 auto 20px auto;
-  padding: 25px 17px;
-  width: 280px;
-
-  &--panorama {
-    margin: 0 20px;
-  }
+.page-foto__list-foto {
+  list-style: none;
+  padding: 8px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
-    &--panorama {
-      margin: 0 20px;
-    }
+    padding: 34px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    &--panorama {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 0 130px;
-      padding: 27px;
-    }
+    padding: 35px 120px 0 120px;
+    justify-content: space-between;
   }
 }
 
-.page-foto__comments-text {
-  line-height: 24px;
+.page-foto__item-foto {
+  @media (min-width: @tablet-width) {
+    padding: 10px 10px 0 10px;
+  }
+}
 
+.page-foto__comments-panorama {
+  background-color: #f2f2f2;
+  text-align: left;
+  margin: 0 auto 20px auto;
+  padding: 15px 19px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 25px 25px 28px;
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 620px;
+    height: 121px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 22px 29px 25px 29px;
+    margin: 0 130px;
+    width: 940px;
+    height: 96px;
+  }
+}
+
+.page-foto__panorama-text {
   &--autor {
     font-size: 14px;
     font-weight: bold;
     color: #283645;
     margin: 0;
-    flex-grow: 1;
   }
 
   &--time {
     font-size: 14px;
     font-weight: 300;
     color: #283645;
+    letter-spacing: -0.3px;
     margin: 0;
   }
 
   &--text {
     font-size: 12px;
     font-weight: normal;
+    letter-spacing: 1.1px;
+    color: #283645;
+    margin: 0 0 auto 0;
+    padding: 3px 0 0 0;
+    line-height: 24px;
+    width: 100%;
+    order: 1;
+  }
+
+  &--number-likes {
+    font-size: 12px;
+    font-weight: normal;
+    color: #d22856;
+    padding: 0 0 0 13px;
+    margin: auto 0 0 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--number-likes {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.page-foto__panorama-like {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 12px 0 0 0;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 124px;
+    align-items: center;
+  }
+}
+
+.page-foto__panorama-like-btn {
+  width: 13px;
+  height: 12px;
+  background: url("../../../img/icon-heart.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  margin: 0 5px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 19px;
+    align-self: center;
+    order: 1;
+  }
+}
+
+.page-foto__comments {
+  background-color: #f2f2f2;
+  text-align: left;
+  margin: 0 auto 30px auto;
+  padding: 15px 19px 15px 19px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 300px;
+    height: 159px;
+    padding: 20px 25px 35px 29px;
+    margin: 0;
+  }
+}
+
+.page-foto__comments-text {
+  &--autor {
+    font-size: 14px;
+    font-weight: bold;
     color: #283645;
     margin: 0;
-    order: 1;
+  }
+
+  &--time {
+    font-size: 14px;
+    font-weight: 300;
+    color: #283645;
+    letter-spacing: -0.3px;
+    margin: 0;
+  }
+
+  &--text {
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1.1px;
+    color: #283645;
+    margin: 0 0 auto 0;
+    padding: 3px 0 0 0;
+    line-height: 24px;
     width: 100%;
   }
 
@@ -127,17 +278,47 @@
     font-size: 12px;
     font-weight: normal;
     color: #d22856;
-    padding: 0;
+    padding: 0 0 0 13px;
+    margin: auto 0 0 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--text {
+      height: 67px;
+      line-height: 25px;
+    }
+
+    &--number-likes {
+      padding: 0;
+    }
   }
 }
 
 .page-foto__comments-like {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 12px 0 0 0;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+
+.page-foto__like-btn {
   width: 13px;
   height: 12px;
   background: url("../../../img/icon-heart.svg") no-repeat;
   background-position: center;
   background-size: contain;
   border: none;
+  margin: 0 5px 0 0;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 
 .page-foto__post-title {
