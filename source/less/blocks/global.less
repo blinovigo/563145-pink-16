@@ -21,14 +21,19 @@ body {
 
   &--flex {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
+    flex-wrap: nowrap;
+    justify-content: none;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
+    flex-wrap: wrap;
   }
 }
 
