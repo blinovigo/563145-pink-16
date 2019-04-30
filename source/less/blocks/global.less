@@ -9,16 +9,31 @@
 
 body {
   box-sizing: border-box;
-  margin: auto;
-  width: 320px;
   font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  margin: 0;
+  width: 100vw;
+}
+
+.wrapper {
+  width: 320px;
+  margin: auto;
+  z-index: 2;
+
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
+    flex-wrap: nowrap;
+    justify-content: none;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
+    flex-wrap: wrap;
   }
 }
 

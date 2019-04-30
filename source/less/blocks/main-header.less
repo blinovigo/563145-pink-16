@@ -1,48 +1,69 @@
 .main-header {
-  position: relative;
-  top: 0;
+  position: absolute;
+  z-index: 2;
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    width: 100%;
-    opacity: 0.7;
+  }
+}
+
+.main-header__logo {
+  width: 75px;
+  height: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 147px;
+    height: 40px;
+    margin: 0 0 19px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 30px 0;
   }
 }
 
 .main-header__menu {
-  display: none;
-  background-color: @color-font-dark;
+  background-color: fade(@bg-color-black, 30%);
   color: @color-font-white;
   margin: 0;
   list-style: none;
   padding: 0;
+  width: 100vw;
 
+  @media (min-width: @desktop-width) {
+    background-color: fade(@bg-color-dark-blue, 50%);
+  }
+}
+
+.main-header__list {
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
     min-height: 110px;
-    padding: 0 130px;
+    padding: 0 90px;
   }
 }
 
 .main-header__item-header {
   height: 66px;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 0 0 #000000;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    height: 105px;
+  }
 
   @media (min-width: @desktop-width) {
-    padding-right: 173px;
+    padding: 0 102px 20px 13px;
   }
 }
 
 .main-header__item {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
@@ -55,10 +76,10 @@
     font-weight: bold;
     line-height: 32px;
     opacity: 0.75;
-    letter-spacing: 1px;
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
     box-shadow: none;
     text-transform: none;
 
@@ -71,22 +92,9 @@
 .main-header__button {
   width: 50px;
   height: 24px;
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.main-header__block {
-  background-color: fadein(@color-font-black, 30%);
-  position: absolute;
-  width: 100%;
-  height: 66px;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 1px 0 0 #000000;
+  background: url("../img/icon-menu-burger.svg") no-repeat;
+  border: none;
+  background-size: cover;
 
   @media (min-width: @desktop-width) {
     display: none;
